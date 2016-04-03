@@ -9,39 +9,47 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-			if ( is_single() ) {
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			}
+<section class="film">
+	<!-- film poster -->
+	<aside class="film-poster">
+		<img src="<?php the_field('film_poster'); ?>" alt="">
+	</aside>
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php retro_film_festival_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+	<!-- film title + screening time/date -->
+	<article class="film-major-details">
+		<h1><?php the_field('movie_title'); ?></h1>
+		<h2><?php the_field('screening_date'); ?></h2>
+		<h3><?php the_field('screening_time'); ?></h3>
 
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'retro-film-festival' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+		<!-- film description + minor details -->
+		<div class="flex">
+			<p class="description"><?php the_field('description'); ?></p>
+			<div class="film-minor-details">
+				<h4>Starring</h4>
+				<p class="small"><?php the_field('key_cast'); ?></p>
+				<h4>Run Time</h4>
+				<p class="small"><?php the_field('film_duration'); ?></p>
+				<h4>Original Release</h4>
+				<p class="small"><?php the_field('release_date'); ?></p>
+			</div>
+		</div>
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'retro-film-festival' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+		<!-- film trailer -->
+		<div class="trailer">
+			<iframe src="https://www.youtube.com/embed/<?php the_field('trailer'); ?>" frameborder="0" allowfullscreen></iframe>
+			
+		</div>
+	</article>
+</section>
+
+
+
+
+
+
 
 	<footer class="entry-footer">
+
 		<?php retro_film_festival_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
