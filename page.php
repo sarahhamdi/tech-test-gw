@@ -14,25 +14,32 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<!-- MAIN -->
+	<main>
+		<div class="wrapper">
 
 			<?php
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
 			endwhile; // End of the loop.
 			?>
+		</div><!-- end of div.wrapper -->
+	</main><!-- end of main -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+	<!-- SLIDER -->
+	<?php include 'template-parts/content-slider.php'; ?>
+	
+	<!-- BUTTON -->
+	<section class="button">
+		<div class="wrapper">
+			<div class="buy-tickets-button">
+				<p>Click For Tix!</p>
+			</div>
+		</div>
+	</section>
+	
 <?php
 
 get_footer();

@@ -8,26 +8,22 @@
  */
 
 get_header(); ?>
-
 	
-		<main>
+	<!-- MAIN -->
+	<main>
+		<div class="wrapper">
+			<?php
+			while ( have_posts() ) : the_post();
 
-		<?php
-		while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/content', get_post_format() );
 
-			get_template_part( 'template-parts/content', get_post_format() );
+			endwhile; // End of the loop.
+			?>
+		</div><!-- end of div.wrapper -->
+	</main><!-- #main -->
 
-			the_post_navigation();
-
-			
-
-
-		endwhile; // End of the loop.
-		?>
-
-		</main><!-- #main -->
-		
-
+	<!-- SLIDER -->
+	<?php include 'template-parts/content-slider.php'; ?>	
 
 <?php
-get_footer();
+get_footer(); 
