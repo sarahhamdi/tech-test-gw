@@ -1,0 +1,37 @@
+body.home {
+	h1 {
+	  position: relative;
+	  height: 200px;
+	  text-align: left;
+	  // display: inline-block;
+	}
+	span.bottom {
+	  position: absolute;
+	  bottom: 0;
+	  right: 0;
+	  text-align: right;
+	}
+	.skewed {
+		@include fontSize(80);
+	    display: inline-block;
+	    position: absolute;
+	    top: 20px;
+	    left: 0px;
+	    transform: rotate(-10deg) skew(-18deg, 0);
+	}
+	
+	h2 {
+		text-align: right;
+	}
+	h4 {
+		display: none;
+	}
+}
+
+div.festival-blurb {
+	padding: 43px 20px 51px 20px;
+	div {
+		transform: perspective(200px) rotateX(35deg);
+	}
+	
+}

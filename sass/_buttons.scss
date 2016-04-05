@@ -1,0 +1,20 @@
+div.buy-tickets-button {
+	position: relative;
+	@include padding-margin (20px, 0)
+	&::before,
+	&::after {
+		content: "";
+  		position: absolute;
+  		height: 7px;
+  		width: 50%;
+  		left: 25%;
+  		background: linear-gradient(90deg, $offblack 0%, #093143 18%, #07cbf1 47%, #093547 79%, $offblack 100%);;
+
+	}
+
+	p {
+		@include padding-margin (20px, 0);
+
+	}
+    
+}

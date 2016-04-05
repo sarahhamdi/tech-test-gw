@@ -1,6 +1,6 @@
 
 	<section class="slider">
-		<div class="wrapper">
+		<div class="wrapper" container>
 
 			<h4>Festival Film Schedule</h4>
 
@@ -12,14 +12,17 @@
 			  <?php while ($filmSlider-> have_posts()): ?>
 			    <?php $filmSlider-> the_post(); ?>
 					
-					<p><?php the_field('screening_date'); ?></p>
+					<article class="slide">
+						<p><?php the_field('screening_date'); ?></p>
 
-					<div class="image-container">
-						<img src="<?php the_field('film_poster'); ?>" alt="">
-						<div class="overlay">
-							<p><?php the_field('movie_title'); ?></p>
-						</div>
-					</div>
+						<div class="image-container">
+							<img src="<?php the_field('film_poster'); ?>" alt="">
+							<div class="overlay">
+								<p><?php the_field('movie_title'); ?></p>
+							</div>
+						</div>	
+					</article>
+					
 					
 			  <?php endwhile; ?>
 			  <?php wp_reset_postdata(); ?>

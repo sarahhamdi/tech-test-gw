@@ -16,15 +16,21 @@ get_header(); ?>
 
 	<!-- MAIN -->
 	<main>
-		<div class="wrapper">
+		<div class="wrapper" container>
+			
+			
 
 			<?php
 			while ( have_posts() ) : the_post();
-
+				
+			
 				get_template_part( 'template-parts/content', 'page' );
+
 
 			endwhile; // End of the loop.
 			?>
+
+
 		</div><!-- end of div.wrapper -->
 	</main><!-- end of main -->
 
@@ -39,7 +45,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
-	
+
 <?php
 
 get_footer();

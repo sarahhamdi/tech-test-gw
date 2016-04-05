@@ -42,6 +42,10 @@ function retro_film_festival_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	/* trff_get_thumbnail_url - Returns current post feature image/thumbnail image URL so we can call add it to content without Wordpress injecting width and height */
+
+
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'retro-film-festival' ),
@@ -113,6 +117,8 @@ add_action( 'widgets_init', 'retro_film_festival_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
+
 function retro_film_festival_scripts() {
 	wp_enqueue_style( 'retro-film-festival-style', get_stylesheet_uri() );
 
@@ -147,6 +153,12 @@ function retro_film_festival_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+}
+
+function trff_get_thumbnail_url( $post ) {
+	$imageID = get_post_thumbnail_id($post->ID);
+	$imageURL = wp_get_attachment_url($imageID);
+	return $imageURL;
 }
 
 add_action( 'wp_enqueue_scripts', 'retro_film_festival_scripts' );

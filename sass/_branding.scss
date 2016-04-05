@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300);
+@import url(https://fonts.googleapis.com/css?family=Raleway:700);
+
+$font-family--header: "futura-medium", 'Raleway', sans-serif;
+$font-family--body	: "Muli", sans-serif;
+
+// Font Weights
+$font-weight--light 	: 300;
+$font-weight--medium 	: 400;
+
+// Base Colours
+
+$black			: rgba(9, 13, 26, 1.00);
+$offblack		: rgba(15, 18, 32, 1.00);
+$white			: rgba(253, 253, 253, 1);
+$blue			: rgba(14, 200, 239, 1.00);
+$pink			: rgba(200, 9, 141, .7);
+
+$zindex-minus1	: -1000;
+$zindex-plus1	: 1000;
+$zindex-2		: 2000;
+$zindex-3		: 3000;
+$zindex-4		: 4000;
+$zindex-5		: 5000;
+$zindex-6		: 6000;
+$zindex-7		: 7000;
+$zindex-8		: 8000;
+$zindex-9		: 9000;
+$zindex-10		: 10000;
+
+
+// Mixins
+
+
+
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
+
+@mixin font-properties ($family, $weight, $align) {
+	font-family: $family;
+	font-weight: $weight;
+	text-align: $align;
+}
+
+@mixin padding-margin ($padding, $margin) {
+	padding: $padding;
+	margin: $margin;
+}
+
+@mixin colors ($background, $color) {
+	background: $background;
+	color: $color;
+}
+
+@mixin flex ($flexflow, $justify-content, $align-content) {
+	flex-flow: $flexflow;
+	justify-content: $justify-content;
+	align-content: $align-content
+}
+

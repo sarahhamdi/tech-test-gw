@@ -1,0 +1,39 @@
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+body {
+	@include colors ($black, $white);
+}
+
+main {
+	@include colors ($black, $white);
+	
+
+}
+div.wrapper {
+	.element {
+	  @include container();
+	}
+}
+
+// HOMEPAGE
+div.hero {
+	padding: 25%;
+	height: 100vh;
+}
+
+div.festival-blurb {
+	.element {
+	  @include row();
+	}
+}
+
+// SLIDER
+section.slider {
+	@include colors ($offblack, $white);
+}
+
+// BUTTON
+section.button {
+	@include colors ($offblack, $white);
+}
