@@ -5,11 +5,15 @@ body {
 	@include colors ($black, $white);
 }
 
-main {
+body.home main {
 	@include colors ($black, $white);
-	
-
 }
+
+body.single-feature-films main {
+	@include colors ($offblack, $white);
+}
+
+
 div.wrapper {
 	.element {
 	  @include container();
@@ -28,9 +32,30 @@ div.festival-blurb {
 	}
 }
 
+// INDIVIDUAL FILM PAGE
+section.film {
+	// display: flex;
+	@include padding-margin(92px 0 86px 0, 0)
+	@include row();
+}
+
+div.trailer {
+	@include row();
+	iframe {
+		width: 100%;
+		height: 250px;
+		border: 2px solid $white;
+		border-radius: 3px;
+	}
+}
+
 // SLIDER
-section.slider {
+body.home section.slider {
 	@include colors ($offblack, $white);
+}
+
+body.single-feature-films section.slider {
+	@include colors ($black, $white);
 }
 
 // BUTTON

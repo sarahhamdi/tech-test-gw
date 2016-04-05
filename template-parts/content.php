@@ -9,14 +9,14 @@
 
 ?>
 
-<section class="film">
+<section class="film" row>
 	<!-- film poster -->
-	<aside class="film-poster">
+	<aside class="film-poster" column="6">
 		<img src="<?php the_field('film_poster'); ?>" alt="">
 	</aside>
 
 	<!-- film title + screening time/date -->
-	<article class="film-major-details">
+	<article class="film-major-details" column="7 +1">
 		<h1><?php the_field('movie_title'); ?></h1>
 		<h2><?php the_field('screening_date'); ?></h2>
 		<h3><?php the_field('screening_time'); ?></h3>
@@ -35,7 +35,7 @@
 		</div>
 
 		<!-- film trailer -->
-		<div class="trailer">
+		<div class="trailer" column="12">
 			<iframe src="https://www.youtube.com/embed/<?php the_field('trailer'); ?>" frameborder="0" allowfullscreen></iframe>
 			
 		</div>
@@ -48,8 +48,5 @@
 
 
 
-	<footer class="entry-footer">
-
-		<?php retro_film_festival_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	
 </article><!-- #post-## -->

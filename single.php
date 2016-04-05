@@ -11,7 +11,7 @@ get_header(); ?>
 	
 	<!-- MAIN -->
 	<main>
-		<div class="wrapper">
+		<div class="wrapper" container>
 			<?php
 			while ( have_posts() ) : the_post();
 
