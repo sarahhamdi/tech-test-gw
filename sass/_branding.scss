@@ -1,12 +1,70 @@
-// @import url(https://fonts.googleapis.com/css?family=Muli:400,300);
-// @import url(https://fonts.googleapis.com/css?family=Raleway:700);
+// FONTS
 
-$font-family--header: "futura-medium", 'Raleway', sans-serif;
-$font-family--body	: "Muli", sans-serif;
+@font-face {
+    font-family: 'Orbitron';
+    font-style: regular;
+    font-weight: 500;
+    src: url('fonts/Orbitron/Orbitron-Regular.ttf'); /* IE9 Compat Modes */
+    src: url('fonts/Orbitron/Orbitron-Regular.ttf?#iefix') format('truetype'), /* IE6-IE8 */
+    url('fonts/Orbitron/Orbitron-Regular.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    font-style: bold;
+    font-weight: 700;
+    src: url('fonts/Orbitron/Orbitron-Bold.ttf'); /* IE9 Compat Modes */
+    src: url('fonts/Orbitron/Orbitron-Bold.ttf?#iefix') format('truetype'), /* IE6-IE8 */
+    url('fonts/Orbitran/Orbitran-Bold.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    font-style: black;
+    font-weight: 900;
+    src: url('fonts/Orbitron/Orbitron-Black.ttf'); /* IE9 Compat Modes */
+    src: url('fonts/Orbitron/Orbitron-Black.ttf?#iefix') format('truetype'), /* IE6-IE8 */
+    url('fonts/Orbitron/Orbitron-Black.ttf') format('truetype'); 
+}
+
+
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: light;
+    font-weight: 300;
+    src: url('fonts/Comfortaa/Comfortaa-Light.ttf'); /* IE9 Compat Modes */
+    src: url('fonts/Comfortaa/Comfortaa-Light.ttf?#iefix') format('truetype'), /* IE6-IE8 */
+    url('fonts/Comfortaa/Comfortaa-Light.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/Comfortaa/Comfortaa-Regular.ttf'); /* IE9 Compat Modes */
+    src: url('fonts/Comfortaa/Comfortaa-Regular.ttf?#iefix') format('truetype'), /* IE6-IE8 */
+    url('fonts/Comfortaa/Comfortaa-Regular.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/Comfortaa/Comfortaa-Bold.ttf'); /* IE9 Compat Modes */
+    src: url('fonts/Comfortaa/Comfortaa-Bold.ttf?#iefix') format('truetype'), /* IE6-IE8 */
+    url('fonts/Comfortaa/Comfortaa-Bold.ttf') format('truetype'); 
+}
+
+
+$font-family--header: "Orbitron", sans-serif;
+$font-family--body	: "Comfortaa", sans-serif;
 
 // Font Weights
 $font-weight--light 	: 300;
-$font-weight--medium 	: 400;
+$font-weight--normal 	: 500;
+$font-weight--bold	 	: 700;
+$font-weight--black	 	: 900;
 
 // Base Colours
 
@@ -15,6 +73,8 @@ $offblack		: rgba(15, 18, 32, 1.00);
 $white			: rgba(253, 253, 253, 1);
 $blue			: rgba(14, 200, 239, 1.00);
 $pink			: rgba(200, 9, 141, .7);
+
+$text-shadow: 0px 0px 50px rgba(190, 4, 105, 1.00);
 
 $zindex-minus1	: -1000;
 $zindex-plus1	: 1000;
@@ -30,8 +90,6 @@ $zindex-10		: 10000;
 
 
 // Mixins
-
-
 
 @mixin fontSize($sizeValue){
     font-size: $sizeValue * 1px;

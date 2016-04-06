@@ -8,7 +8,7 @@ section.film {
 	}
 	article.film-major-details {
 		h2 {
-			@include padding-margin(0, 34px 0 0 0);
+			@include padding-margin(0, 13px 0 0 0);
 		}
 		div.row {
 			@include padding-margin(0, 32px 0 0 0);
@@ -23,7 +23,7 @@ section.film {
 	}
 
 	div.trailer {
-		@include padding-margin(0, 37px 0 0 0);
+		@include padding-margin(0, 24px 0 0 0);
 	}
 }
 

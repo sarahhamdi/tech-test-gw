@@ -28,7 +28,7 @@
 				<h4>Starring</h4>
 				<p class="small"><?php the_field('key_cast'); ?></p>
 				<h4>Run Time</h4>
-				<p class="small"><?php the_field('film_duration'); ?></p>
+				<p class="small"><?php the_field('film_duration'); ?> min</p>
 				<h4>Original Release</h4>
 				<p class="small"><?php the_field('release_date'); ?></p>
 			</div>

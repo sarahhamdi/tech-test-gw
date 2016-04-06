@@ -1,18 +1,22 @@
 body.home {
 	h1 {
 	  position: relative;
-	  height: 200px;
+	  height: 350px;
 	  text-align: left;
 	  // display: inline-block;
+	}
+	span.top {
+		position: absolute;
+		top: 0;
+		left: 50px;
 	}
 	span.bottom {
 	  position: absolute;
 	  bottom: 0;
-	  right: 0;
+	  right: 150px;
 	  text-align: right;
 	}
 	.skewed {
-		@include fontSize(80);
 	    display: inline-block;
 	    position: absolute;
 	    top: 20px;
@@ -23,15 +27,18 @@ body.home {
 	h2 {
 		text-align: right;
 	}
-	h4 {
-		display: none;
+	section.slider {
+		h4 {
+			display: none;
+		}
 	}
 }
 
 div.festival-blurb {
-	padding: 43px 20px 51px 20px;
+	padding: 0px 20px 100px 20px;
+	text-align: center;
 	div {
-		transform: perspective(200px) rotateX(35deg);
+		transform: perspective(400px) rotateX(35deg);
 	}
 	
 }

@@ -21,7 +21,7 @@
 	</div>
 
 	<div class="festival-blurb" row>
-		<div column="10 +1">
+		<div column="14">
 		<?php
 			the_content();
 

@@ -1,3 +1,146 @@
-body.home {
-	text-align: center;
+// NAVIGATION
+
+nav {
+	p.festival-details {
+		font-weight: $font-weight--light;
+		@include fontSize(8);
+		text-transform: uppercase;
+		text-align: center;
+		
+		sup {
+			@include fontSize(5);
+			margin: 0px 0;
+		}
+		span {
+			color: $blue;
+			margin: 0 14px;
+		}
+	}
 }
+
+
+// HOMEPAGE
+body.home {
+	h1,
+	h2 {
+	  font-family: $font-family--header;
+
+	}
+	span.top,
+	span.bottom {
+		@include fontSize(30);
+		font-weight: $font-weight--normal;
+	}
+	.skewed {
+		@include fontSize(142);
+	    display: inline-block;
+	    position: absolute;
+	    top: 20px;
+	    left: 0px;
+	    transform: rotate(-10deg) skew(-18deg, 0);
+	}
+	
+	h2 {
+		text-align: right;
+		font-weight: $font-weight--normal;
+		@include fontSize(18);
+		margin-right: 170px;
+	}
+
+	div.festival-blurb {
+
+		p {
+			@include fontSize(17);
+			margin: 40px 0;
+		}
+		h3 {
+			@include fontSize(30);
+			text-transform: uppercase;
+			color: $blue;
+		}
+		h4 {
+			text-transform: uppercase;
+			@include fontSize(14);
+			font-weight: $font-weight--light;
+		}
+		h4.tagline {
+			@include fontSize(18);
+			text-transform: none;
+		}
+	}
+
+	section.slider {
+		h4 {
+			display: none;
+		}
+	}
+
+	
+}
+
+article.film-major-details {
+	h1 {
+		@include fontSize(32);
+		text-transform: uppercase;
+		text-shadow: $text-shadow;
+		font-weight: $font-weight--bold;
+	}
+	
+	h2,
+	h3 {
+		@include fontSize(16);
+
+	}
+	h2 {
+		margin-top: 10px;
+	}
+	
+	h3 {
+		font-weight: $font-weight--normal;
+	}
+
+	h2,
+	h4 {
+		color: $pink;
+	}
+	
+	h4 {
+		text-transform: uppercase;
+	}
+
+	.film-minor-details {
+		@include fontSize(8);
+		h4 {
+			@include fontSize(10);
+			font-weight: $font-weight--bold;
+		}
+		p {
+			margin-bottom: 20px;
+		}
+	}
+	
+}
+
+
+// BUTTONS
+div.buy-tickets-button {
+	p {
+		@include fontSize(21);
+		text-transform: uppercase;
+		font-family: $font-family--header;
+		font-weight: $font-weight--bold;
+		text-align: center;
+		text-shadow: $text-shadow;
+	}
+
+}
+
+nav {
+	div.buy-tickets-button {
+		p {
+			@include fontSize(16);
+		}
+
+	}
+}
+
