@@ -9,6 +9,9 @@
 
 get_header(); ?>
 	
+	<!-- NAVIGATION -->
+	<?php include 'header-nav.php'; ?>
+
 	<!-- MAIN -->
 	<main>
 		<div class="wrapper" container>

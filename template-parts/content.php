@@ -22,9 +22,9 @@
 		<h3><?php the_field('screening_time'); ?></h3>
 
 		<!-- film description + minor details -->
-		<div class="flex">
-			<p class="description"><?php the_field('description'); ?></p>
-			<div class="film-minor-details">
+		<div class="row" row>
+			<p class="description" column="7"><?php the_field('description'); ?></p>
+			<div class="film-minor-details" column="7">
 				<h4>Starring</h4>
 				<p class="small"><?php the_field('key_cast'); ?></p>
 				<h4>Run Time</h4>

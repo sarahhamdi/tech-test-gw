@@ -20,6 +20,17 @@ div.wrapper {
 	}
 }
 
+div.row,
+nav {
+	@include row();
+}
+
+// NAV 
+header {
+	@include container();
+	@include padding-margin(0, 0);
+}
+
 // HOMEPAGE
 div.hero {
 	padding: 25%;
@@ -34,8 +45,7 @@ div.festival-blurb {
 
 // INDIVIDUAL FILM PAGE
 section.film {
-	// display: flex;
-	@include padding-margin(92px 0 86px 0, 0)
+	@include padding-margin(92px 0 86px 0, 0);
 	@include row();
 }
 
