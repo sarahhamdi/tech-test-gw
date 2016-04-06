@@ -6,6 +6,24 @@ section.film {
 	img {
 		width: 100%;
 	}
+	article.film-major-details {
+		h2 {
+			@include padding-margin(0, 34px 0 0 0);
+		}
+		div.row {
+			@include padding-margin(0, 32px 0 0 0);
+			p.description {
+				padding-left: 0;
+				padding-right: 30px;
+			}
+			div.film-minor-details {
+				// @include column(7/14, true);
+			}
+		}
+	}
 
+	div.trailer {
+		@include padding-margin(0, 37px 0 0 0);
+	}
 }
 

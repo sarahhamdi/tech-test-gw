@@ -18,3 +18,19 @@ div.buy-tickets-button {
 	}
     
 }
+
+nav {
+	div.buy-tickets-button {
+		@include padding-margin (0, 22px 0 0 0)
+		&::before,
+		&::after {
+	  		width: 85%;
+	  		left: 7.5%;
+			background: linear-gradient(90deg, $black 0%, #093143 18%, #07cbf1 47%, #093547 79%, $black 100%);;
+		}
+		p {
+			@include padding-margin (16px 0 11px 0, 0);
+
+		}
+	}
+}
